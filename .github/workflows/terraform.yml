@@ -21,10 +21,9 @@ jobs:
           terraform_wrapper: false
       - name: Terraform init
         run: terraform init -backend-config="TF_STATE_BUCKET_NAME" -backend-config="region=us-east-1"
-        working-directory: ./terraform
 
       - name: Terraform Plan
         run: terraform plan
-        working-directory: .terraform
+        
 
     
