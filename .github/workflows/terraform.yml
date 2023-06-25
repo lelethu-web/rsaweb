@@ -20,7 +20,7 @@ jobs:
         with:
           terraform_wrapper: false
       - name: Terraform init
-        run: terraform init -backend-config="TF_STATE_BUCKET_NAME" -backend-config="region=us-east-1"
+        run: terraform init -backend-config="storagetf" -backend-config="region=us-east-1"
 
       - name: Terraform Plan
         run: terraform plan
