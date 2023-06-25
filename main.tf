@@ -2,13 +2,13 @@
 # we will create the ec2 instance here and define the provider here using the variables to authenticate via github
 # S3 bucket to store our Terraform state file
 
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-       version = "~>5.0"
-       }
-  }
+//terraform {
+  //required_providers {
+    //aws = {
+      //source = "hashicorp/aws"
+       //version = "~>5.0"
+       //}
+  //}
 //   backend "s3"{
  //   key = "aws/ec2-deploy/terraform.tfstate"
 //}
