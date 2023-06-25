@@ -3,7 +3,7 @@ name: 'Terraform'
 on:
   push_request:
     branches: [ "main" ]
-  pull_request:
+  
 
   workflow_dispatch:
 
