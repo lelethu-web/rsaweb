@@ -3,7 +3,9 @@
 #Provider
 
 provider "aws" {
-    region = "us-easti"
+    region = "us-east-1"
+    aws_access_key_id: ${{secrets.AWS_ACCESS_KEY}}
+    aws_secret_key: ${{secrets.AWS_SECRET.KEY}}
 
 }
 
