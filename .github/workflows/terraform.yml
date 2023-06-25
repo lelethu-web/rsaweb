@@ -1,12 +1,10 @@
 name: 'Terraform'
 
 on:
-  push_request:
+  push:
     branches: [ "main" ]
   pull_request:
-  
 
-  workflow_dispatch:
 
 env:
   aws_access_key_id: ${{secrets.AWS_ACCESS_KEY}}
