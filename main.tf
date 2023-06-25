@@ -12,7 +12,7 @@
 //   backend "s3"{
  //   key = "aws/ec2-deploy/terraform.tfstate"
 //}
-}
+//}
 
 
 #Provider
