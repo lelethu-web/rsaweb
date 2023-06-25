@@ -1,0 +1,29 @@
+name: 'Terraform'
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+env:
+  aws_access_key_id: ${{secrets.AWS_ACCESS_KEY}}
+  aws_secret_key: ${{secrets.AWS_SECRET.KEY}}
+
+jobs:
+  terraform:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          terraform_wrapper: false
+      - name: Terraform init
+        run: terraform init -backend-config="TF_STATE_BUCKET_NAME" -backend-config="region=us-east-1"
+        working-directory: ./terraform
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: .terraform
+
+    
